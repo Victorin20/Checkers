@@ -1,0 +1,106 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+hr{
+    width:500px;
+}
+
+#board{
+    width : 800px;
+    height : 800px;
+    background-color: #bf670f;
+    border : 6px solid #794616;
+
+    margin : 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.blackSquare{
+    width : 100px;
+    height : 100px;
+    background: black;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteSquare{
+    width : 100px;
+    height : 100px;
+    background: white;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.piece{
+    position:absolute;
+    left:100px;
+}
+
+#buttons{
+    justify-content: center;  
+    padding: 20px;
+}
+
+.btn {
+    justify-content: center;
+    font-weight: 400;
+    color:rgb(224, 33, 33);
+      
+    padding: 16px;
+    border: 10px;
+    border-radius: 10%;
+}
+
+#start{
+    color:green;
+}
+#pause{
+    color:orange;
+}
+
+.Wcircle{
+    width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: rgb(210, 19, 9);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.dameWcircle{
+    width: 90px;
+      height: 90px;
+      border-radius: 50%;
+      background-color: rgb(90, 5, 0);
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.Bcircle{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgb(13, 13, 13);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+.dameBcircle{
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background-color: rgb(114, 110, 110);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.possibleMovement{
+    width:100px;
+    height:100px;
+    background-color: rgb(10, 107, 10);
+}
+
