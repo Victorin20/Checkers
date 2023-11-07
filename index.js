@@ -1,6 +1,6 @@
 let lastSelection;
-let whiteScore = 0;
-let blackScore = 0;
+const whiteScore = {score : 0};
+const blackScore = {score : 0};
 let pieces = [];
 const move = {Direction :""};
 let table = [
@@ -28,7 +28,7 @@ document.addEventListener("click", (event) => {
     let xPosition = selectedElement.id[2];
     yPosition = parseInt(yPosition);
     xPosition = parseInt(xPosition);
-
+    
 
    pieces.forEach((piece) =>
    {      
@@ -49,19 +49,21 @@ document.addEventListener("click", (event) => {
             {
                 if(table[yPosition][xPosition] === 1 && yPosition === 0)
                 {
-                    blackScore += 30;
-                    document.getElementById("blackScore").innerText = "Black score : " +blackScore.toString();
+                    blackScore.score += 30;
+                  
                 }
                 if(table[yPosition][xPosition] === -1 && yPosition === 7)
                 {
-                    whiteScore += 30;
-                    document.getElementById("whiteScore").innerText = "White score : " + whiteScore.toString();
+                    whiteScore.score += 30;
+                    
                 }
                 piece.delete(yPosition, xPosition, pieces);
                 
             }
-            
-            piece.takePiece(yPosition, xPosition, pieces, move);
+            piece.takePiece(yPosition, xPosition, pieces, move, whiteScore, blackScore);
+
+            document.getElementById("blackScore").innerText = "Black score : " +blackScore.score.toString();
+            document.getElementById("whiteScore").innerText = "White score : " + whiteScore.score.toString();
         });
     }
 
@@ -88,9 +90,5 @@ document.addEventListener("click", (event) => {
     } 
              
     });
-    for(let i = 0; i < 8; i++)
-    {
-        console.log(table[i]);
-    }
-    console.log("")
+   
 });

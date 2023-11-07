@@ -254,7 +254,7 @@ class Piece{
                 })
       }
 
-    takePiece(yPosition, xPosition, pieces, move)
+    takePiece(yPosition, xPosition, pieces, move, whiteScore, blackScore)
     {
         
         if(move.Direction === "left")
@@ -270,6 +270,7 @@ class Piece{
                     {
                         pieceToTake.getElement().remove("Wcircle");
                         pieces.splice(pieceToDeletePosition, 1);
+                        blackScore.score += 10;
                     }
                     pieceToDeletePosition++;
                 })
@@ -286,6 +287,7 @@ class Piece{
                         
                         pieceToTake.getElement().classList.remove("Bcircle");
                         pieces.splice(pieceToDeletePosition,1);
+                        whiteScore.score += 10;
                     }
                     pieceToDeletePosition++;
                 })
@@ -307,7 +309,7 @@ class Piece{
                             {
                                 pieceToTake.getElement().remove("Wcircle");
                                 pieces.splice(pieceToDeletePosition,1);
-                                
+                                blackScore.score += 10;
                             }
                             pieceToDeletePosition++;
                         })
@@ -325,6 +327,7 @@ class Piece{
                         
                         pieceToTake.getElement().classList.remove("Bcircle");
                         pieces.splice(pieceToDeletePosition,1);
+                        whiteScore.score += 10;
                     }
                     pieceToDeletePosition++;
                 })
