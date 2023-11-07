@@ -10,6 +10,7 @@ function setGame()
             square.id = r.toString() + "-" + c.toString();
             updatesquare(square, c, r);
             document.getElementById("board").append(square);
+            
         }
     } 
 
@@ -25,6 +26,7 @@ function setGame()
                 let id = r.toString() + "-" + c.toString();
                 piece.getElement().id = id;              
                 document.getElementById(id).append(piece.getElement());
+                
             }  
         }
     } 
